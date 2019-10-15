@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="renderer" content="webkit">
-    <link rel="shortcut icon" href="./favicon.ico">
+    <link rel="shortcut icon" href="/static/favicon.ico">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./bootstrap-3.3.7-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/static/bootstrap-3.3.7-dist/css/bootstrap.css">
     <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
-    <script type="text/javascript" src="./bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <script type="text/javascript" src="/static/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
     <title>影擒 - 专业的影视擒拿手</title>
 </head>
 <body>
@@ -18,12 +18,15 @@
         <div class="banner">
             <div class="nav">
                 <nav class="navbar navbar-default">
-                    <span class="fav">本站不提供视频资源，数据来自互联网</span>
+                    <span class="fav">本站不提供视频资源，数据来源于互联网</span><br>
+                    <!--
+                    <span class="fav">不提供播放功能，结果为第三方播放平台</span>
+                    -->
                 </nav>
             </div>
         </div>
         <div class="content clearfix both-css">
-            <span>数据由程序智能自动获取，搜索结果不可控</span> <br>
+            <span>数据由程序智能自动获取，搜索结果不可控</span><br>
             <span>如结果内含广告，请勿轻信，谨防上当受骗</span><br><br>
             <div class="content-inner">
                 <div class="search">
@@ -151,11 +154,13 @@
         line-height: 3em;
 
     }
-	.navbar {
+
+    .navbar {
         position: fixed;
         width: 100%;
         z-index: 9999;
     }
+
     .content > span {
         color: #eb9316;
         font-weight: bold;
