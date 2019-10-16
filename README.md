@@ -16,8 +16,8 @@
 
 ## 启动界面
 
-![影擒，专业的影视擒拿手](https://raw.githubusercontent.com/Eeyhan/pictures/master/video1.png)
-![影擒，专业的影视擒拿手](https://raw.githubusercontent.com/Eeyhan/pictures/master/video2.png)
-![影擒，专业的影视擒拿手](https://raw.githubusercontent.com/Eeyhan/pictures/master/video3.png)
-![影擒，专业的影视擒拿手](https://raw.githubusercontent.com/Eeyhan/pictures/master/video4.png)
-![影擒，专业的影视擒拿手](https://raw.githubusercontent.com/Eeyhan/pictures/master/video5.png)
+![影擒，专业的影视擒拿手](https://raw.githubusercontent.com/Eeyhan/pictures/master/video1.jpg)
+![影擒，专业的影视擒拿手](https://raw.githubusercontent.com/Eeyhan/pictures/master/video2.jpg)
+![影擒，专业的影视擒拿手](https://raw.githubusercontent.com/Eeyhan/pictures/master/video3.jpg)
+![影擒，专业的影视擒拿手](https://raw.githubusercontent.com/Eeyhan/pictures/master/video4.jpg)
+![影擒，专业的影视擒拿手](https://raw.githubusercontent.com/Eeyhan/pictures/master/video5.jpg)
