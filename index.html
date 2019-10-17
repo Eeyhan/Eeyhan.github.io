@@ -305,7 +305,7 @@
                             var online_link = eval(item.online_link);
                             var xunlei_link = eval(item.xunlei_link);
                             $.each(m3u8_link, function (j, innerItem) {
-                                let infos = '';
+                                let infos = '<br>';
                                 if (typeof innerItem == 'object') {
                                     for (let link in innerItem) {
                                         let name = Object.keys(innerItem[link]);
@@ -341,7 +341,7 @@
                             });
 
                             $.each(online_link, function (j, innerItem) {
-                                let infos = '<br>';
+                                let infos = '';
                                 if (typeof innerItem == 'object') {
                                     for (let link in innerItem) {
                                         let name = Object.keys(innerItem[link]);
