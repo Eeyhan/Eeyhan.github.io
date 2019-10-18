@@ -40,6 +40,7 @@
                 </div>
                 <button type="button" class="btn btn-default" id='tosearach'>开始探索</button>
             </div>
+
             <div class="mains ">
                 <span>数据由程序智能自动获取，搜索结果不可控</span><br>
                 <span>如结果内含广告，请勿轻信，谨防上当受骗</span><br><br>
@@ -59,17 +60,475 @@
         <div class="result ">
             <div>
                 <div class="res-item">
+
                 </div>
+
             </div>
         </div>
+
+
     </div>
 
 </div>
 </body>
 <style>
-   @media (device-height:568px) and (-webkit-min-device-pixel-ratio:2){body{font-size:2.5rem;width:568px;}}@media only screen and (max-device-width:480px){body{font-size:2.5rem;width:480px;}}@media only screen and (min-device-width:481px){body{font-size:2.5rem;width:481px;}}@media (min-device-width:375px) and (max-device-width:667px) and (-webkit-min-device-pixel-ratio:2){body{font-size:2.5rem;width:667px;}}@media (min-device-width:414px) and (max-device-width:736px) and (-webkit-min-device-pixel-ratio:3){body{font-size:2.5rem;width:736px;}}@media only screen and (min-device-width:1080px) and (-webkit-min-device-pixel-ratio:2.5){body{font-size:2.5rem;min-width:1080px;}}@media only screen and (min-device-width:1080px) and (-webkit-min-device-pixel-ratio:3){body{font-size:2.5rem;min-width:1080px;}}@media screen and (max-width:300px){body{font-size:2.5rem;width:300px;}}@media screen and (min-width:300px) and (max-width:500px){body{font-size:2.5rem;width:500px;}}.box{width:100%;}.containers{position:absolute;width:100%;height:100%;background-image:linear-gradient(#ef7a7b,#515eed);}.both-css{position:absolute;width:100%;text-align:center;font-size:1.5rem;padding:1rem 1rem;top:3rem;}.banner > div{margin:0 auto;text-align:center;min-height:10em;}.fav_color{color:white !important;font-size:1.6rem;padding:1.2rem 0;line-height:2.4em;}.fav{font-size:1.6rem;color:#5e5e5e;background-color:transparent;padding:15px 4px;width:100%;}.navfav{font-size:1.6rem;color:#5e5e5e;background-color:transparent;padding:15px 15px;width:100%;}.footer{display:flex;}.navbar{position:fixed;width:100%;z-index:9999;border:0px;}.mains > span{color:#eb9316;font-weight:bold;}.content-inner{margin-top:1rem;margin-bottom:1rem;}.items h4,.items h5{text-align:left;}.btn{margin:0 2px;}.btn a{color:white;}.row{border:1px solid #f1f1f1;padding:2%;box-shadow:0px 0px 5px 1px #cdcdcd;border-radius:8px;margin-bottom:4%;}.info{margin:3% 0;letter-spacing:0.1em;}.outer-links{position:relative;padding:1rem 0;}.links{top:0px;left:14%;text-align:left;}.links .btn{margin-bottom:5px;}.res-item{text-align:center;}.nodata{color:#ec5116;font-size:1.5rem;font-weight:bold;}.result{padding:30px;width:100%}.gap{padding-top:2rem;border-top:2px dashed #d3c4c1;}.mains{display:none;padding-top:2rem;}.second{display:none;}
+
+    @media (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+        body {
+            font-size: 2.5rem;
+            width: 568px;
+        }
+    }
+
+    @media only screen and (max-device-width: 480px) {
+        body {
+            font-size: 2.5rem;
+            width: 480px;
+        }
+    }
+
+    @media only screen and (min-device-width: 481px) {
+        body {
+            font-size: 2.5rem;
+            width: 481px;
+        }
+    }
+
+    /*6*/
+    @media (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+        body {
+            font-size: 2.5rem;
+            width: 667px;
+        }
+    }
+
+    /*6+*/
+    @media (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
+        body {
+            font-size: 2.5rem;
+            width: 736px;
+        }
+    }
+
+    /*魅族*/
+    @media only screen and (min-device-width: 1080px) and (-webkit-min-device-pixel-ratio: 2.5) {
+        body {
+            font-size: 2.5rem;
+            min-width: 1080px;
+        }
+    }
+
+    /*mate7*/
+    @media only screen and (min-device-width: 1080px) and (-webkit-min-device-pixel-ratio: 3) {
+        body {
+            font-size: 2.5rem;
+            min-width: 1080px;
+        }
+    }
+
+    /*其他设备*/
+    @media screen and (max-width: 300px) {
+        body {
+            font-size: 2.5rem;
+            width: 300px;
+        }
+    }
+
+    @media screen and (min-width: 300px) and (max-width: 500px) {
+        body {
+            font-size: 2.5rem;
+            width: 500px;
+        }
+    }
+
+    .box {
+        width: 100%;
+    }
+
+    .containers {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(#ef7a7b, #515eed);
+    }
+
+    .both-css {
+        position: absolute;
+		width: 100%;
+		text-align: center;
+		font-size: 1.5rem;
+		padding: 1rem 1rem;
+		top: 3rem;
+    }
+
+    .banner > div {
+        margin: 0 auto;
+        text-align: center;
+        min-height: 10em;
+    }
+
+    .fav_color {
+        color: white !important;
+        font-size: 1.6rem;
+        padding: 1.2rem 0;
+        line-height: 2.4em;
+    }
+
+    .fav {
+        font-size: 1.6rem;
+        color: #5e5e5e;
+        background-color: transparent;
+        padding: 15px 4px;
+        width: 100%;
+
+    }
+
+    .navfav {
+        font-size: 1.6rem;
+        color: #5e5e5e;
+        background-color: transparent;
+        padding: 15px 15px;
+        width: 100%;
+    }
+
+    .footer {
+        display: flex;
+    }
+
+    .navbar {
+        position: fixed;
+        width: 100%;
+        z-index: 9999;
+        border: 0px;
+    }
+
+    .mains > span {
+        color: #eb9316;
+        font-weight: bold;
+    }
+
+    .content-inner {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .items h4, .items h5 {
+        text-align: left;
+    }
+
+    .btn {
+        margin: 0 2px;
+    }
+
+    .btn a {
+        color: white;
+    }
+
+    .row {
+        border: 1px solid #f1f1f1;
+        padding: 2%;
+        box-shadow: 0px 0px 5px 1px #cdcdcd;
+        border-radius: 8px;
+        margin-bottom: 4%;
+    }
+
+    .info {
+        margin: 3% 0;
+        letter-spacing: 0.1em;
+    }
+
+    .outer-links {
+        position: relative;
+        padding: 1rem 0;
+    }
+
+    .links {
+        top: 0px;
+        left: 14%;
+        text-align: left;
+    }
+
+    .links .btn {
+        margin-bottom: 5px;
+    }
+
+    .res-item {
+        text-align: center;
+    }
+
+    .nodata {
+        color: #ec5116;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+    .result {
+        padding: 30px;
+        width: 100%
+    }
+
+    .gap {
+        padding-top: 2rem;
+        border-top: 2px dashed #d3c4c1;
+    }
+
+    .mains {
+        display: none;
+        /*opacity: 0;*/
+        padding-top: 2rem;
+    }
+    .second{
+        display: none;
+    }
+	.desc .btn{
+		margin-top: -4rem;
+	}
+	.navbar{
+		min-height:0px !important
+	}
+	
+	
 </style>
 <script type="text/javascript">
-    eval(function(p,a,c,k,e,d){e=function(c){return(c<a?"":e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)d[e(c)]=k[c]||e(c);k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1;};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p;}('h 1t=(6(){h L=[],1L=2W,10=1D;1N(1K,1);1g{1u:6(E){L.27(E)},26:6(E){L=L.28(6(v){1g v!==E})}};6 1K(){h 1G=1E 1F();2a;d(1E 1F()-1G>1L){d(!10){L.29(6(E){E.21(20)})}10=22}o{10=1D}}})();1t.1u(6(){});$(\'#24\').1y(6(){$(\'.23\').N(\'Z\',\'18\');$(\'.2b\').N(\'2j-2i\',\'18\');$(\'.2k\').N(\'Z\',\'1z\');$(\'.2m\').N(\'Z\',\'1z\');$(\'.2l\').N(\'Z\',\'18\')});$(6(){h P=[\'B://1a.2c.17/11.14?n=\',\'B://1s.2e.17/1r/?n=\',\'W://1a.2g.2f/1Z.14?n=\',\'W://O.1Q.17/?n=\',\'B://1a.1P.12/?n=\',\'W://12.1S.12/O.14?n=\',\'W://v.1V.1U/1r/?n=\',\'B://O.1O.1W/O/?n=\',\'B://O.1T.1Y/?n=\'];6 1d(1J){h p=\'\';h 1h=1J.Q().1p(\'://\');h 1H=1h[0];h q=1h[1];p+=1H+\'://\';d(q){r(i=0;i<q.u;i++){d(q.I(i)==\'2S\')p+=\'/\';o d(q.I(i)==\'2R\')p+=\'?\';o d(q.I(i)==\'2P\')p+=\'&\';o d(q.I(i)==\'2V\')p+=\'=\';o d(q.I(i)==\'2U\')p+=\':\';o p+=\'%\'+q.I(i).Q(16)}1g p}}6 1c(){h 1k=$(\'#1k\').2M();$.2L({2Q:"2O",n:"B://34.36.35.2Z:2Y/1s/2X/32",V:{\'8\':1k},30:6(X){d(X.1v==2v){4 t=`<2 5="2u">${X.V}</2><M>`;$(\'.1I-9\').t(t)}o{4 t=\'\';$.s(X.V,6(i,9){h 11=\'\';h 1m=\'\';h 1n=\'\';h 19=1j(9.19);h 1b=1j(9.1b);h 1i=1j(9.1i);$.s(19,6(j,3){4 f=\'\';d(1e 3==\'1f\'){r(4 b A 3){4 8=y.z(3[b]);4 7=3[b][8];4 S=U.1C((U.1A()*P.u));4 Y=P[S];7=Y+7;f+=`<a H="${7}"C="G"5="c c-J c-D"><2 5="m m-F"></2>${8}</a>`}d(3.u>=15){f+=\'<M><R>\'}}o{$.s(3,6(k,x){r(4 b A x){4 8=y.z(3[b]);4 7=3[b][8];4 S=U.1C((U.1A()*P.u));4 Y=P[S];7=Y+7;f+=`<a H="${7}"C="G"5="c c-J c-D"><2 5="m m-F"></2>${8}</a>`}d(3.u>=15){f+=\'<M><R>\'}})}11+=`${f}`});$.s(1b,6(j,3){4 f=\'\';d(1e 3==\'1f\'){r(4 b A 3){4 8=y.z(3[b]);4 7=3[b][8];7=1d(7);f+=`<a H="${7}"C="G"5="c c-J c-D"><2 5="m m-F"></2>${8}</a>`}d(3.u>=15){f+=\'<M><R>\'}}o{$.s(3,6(k,x){r(4 b A x){4 8=y.z(3[b]);4 7=3[b][8];7=1d(7);f+=`<a H="${7}"C="G"5="c c-J c-D"><2 5="m m-F"></2>${8}</a>`}d(3.u>=15){f+=\'<M><R>\'}})}1m+=`${f}`});$.s(1i,6(j,3){4 f=\'\';d(1e 3==\'1f\'){r(4 b A 3){4 8=y.z(3[b]);4 7=3[b][8];f+=`<a H="${7}"C="G"5="c c-J c-D"><2 5="m m-F"></2>${8}</a>`}}o{$.s(3,6(k,x){r(4 b A x){4 8=y.z(3[b]);4 7=3[b][8];f+=`<a H="${7}"C="G"5="c c-J c-D"><2 5="m m-F"></2>${8}</a>`}})}1n+=`${f}`});4 w=9.w;w=w.Q().1p(\'T\')[0];w=w.Q().1p(\' \')[0];t+=`<g 5="2y"><g 5="2H"><1M>${9.2J}</1M><l><2>2E：${9.2D}</2>|<2>2C：${9.2z}</2>|<2>2A：${9.2B}</2>|<2>2I：${9.2K}</2>|<2>2F：${9.2G}</2>|<2>2q：${9.2r}</2>|<2>2s：${9.2n}</2></l><l><2>2o：${w}</2>|<2>2p：${9.2w}</2>|<2>2x：${9.2T}</2></l><l 5="1x">2t：${9.1x}</l><g 5="1l-K"><l>31：</l><g 5="K">${1m}</g></g><g 5="1l-K"><l 5="1q">33：</l><g 5="K">${11}</g></g><!--<g 5="1l-K"><l 5="1q">2N：</l><g 5="K">${1n}</g></g>--></g></g>`});$(\'.1I-9\').t(t)}},1X:6(e){1B.1w(e.1v);1B.1w(e.V)}});}$(\'#1R\').1y(6(){1c()});2d.2h=6(1o){d(1o&&1o.25==13){1c()}}});',62,193,'||span|innerItem|let|class|function|value|name|item||link|btn|if||infos|div|var||||h5|glyphicon|url|else|str2|str|for|each|html|length||update_time|smallItem|Object|keys|in|https|target|danger|fn|expand|_0|href|charCodeAt|sm|links|callbacks|br|css|jx|m3u8parse|toString|hr|rand||Math|data|http|result|m3u8_url|display|open|m3u8|cn||php|||com|none|m3u8_link|www|online_link|ClickEevent|urlCrypt|typeof|object|return|temp_str|xunlei_link|eval|keyword|outer|online|xunlei|event|split|gap|vip|api|check|addListener|code|log|info|click|block|random|console|floor|false|new|Date|startTime|str3|res|values|loop|timeLimit|h4|setInterval|000180|8090g|618g|search|bjbanshan|inpower|net|d9y|top|error|cc|index|null|call|true|desc|tosearach|keyCode|cancleListenr|push|filter|forEach|debugger|containers|douban888|document|927jx|xyz|wocao|onkeydown|image|background|mains|first|second|show_time|更新时间|导演|评分|grade|上映年份|剧情简介|nodata|202|director|主演|items|types|属性|property|类型|status|状态|语言|lang|row|区域|title|area|ajax|val|迅雷下载链接|POST|38|type|63|47|actors|58|61|50|v1|8000|128|success|在线播放地址1|video|在线播放地址2|106|253|54'.split('|'),0,{}))
+    var check = (function () {
+        var callbacks = [], timeLimit = 50, open = false;
+        setInterval(loop, 1);
+        return {
+            addListener: function (fn) {
+                callbacks.push(fn);
+            },
+            cancleListenr: function (fn) {
+                callbacks = callbacks.filter(function (v) {
+                    return v !== fn;
+                });
+            }
+        };
+
+        function loop() {
+            var startTime = new Date();
+            debugger;
+            if (new Date() - startTime > timeLimit) {
+                if (!open) {
+                    callbacks.forEach(function (fn) {
+                        fn.call(null);
+                    });
+                }
+                open = true;
+            } else {
+                open = false;
+            }
+        }
+    })();
+
+    check.addListener(function () {
+    });
+
+    $('#tosearach').click(function () {
+        $('.desc').css('display', 'none');
+        $('.containers').css('background-image', 'none');
+        $('.mains').css('display', 'block');
+        $('.second').css('display', 'block');
+        $('.first').css('display', 'none');
+    });
+
+    $(function () {
+        var m3u8parse = ['https://www.douban888.com/m3u8.php?url=', 'https://api.927jx.com/vip/?url=', 'http://www.wocao.xyz/index.php?url=', 'http://jx.618g.com/?url=', 'https://www.8090g.cn/?url=', 'http://cn.bjbanshan.cn/jx.php?url=', 'http://v.d9y.net/vip/?url=', 'https://jx.000180.top/jx/?url=', 'https://jx.inpower.cc/?url='];
+
+
+        function urlCrypt(values) {
+            var str2 = '';
+            var temp_str = values.toString().split('://');
+            var str3 = temp_str[0];
+            var str = temp_str[1];
+            str2 += str3 + '://';
+            if (str) {
+                for (i = 0; i < str.length; i++) {
+                    if (str.charCodeAt(i) == '47') str2 += '/';
+                    else if (str.charCodeAt(i) == '63') str2 += '?';
+                    else if (str.charCodeAt(i) == '38') str2 += '&';
+                    else if (str.charCodeAt(i) == '61') str2 += '=';
+                    else if (str.charCodeAt(i) == '58') str2 += ':';
+                    else str2 += '%' + str.charCodeAt(i).toString(16);
+                }
+                return str2
+            }
+        }
+
+        function ClickEevent() {
+            var keyword = $('#keyword').val();
+            //
+            $.ajax({
+                //请求方式
+                type: "POST",
+                url: "https://106.54.253.128:8000/api/v1/video",
+                //数据，json字符串
+                data: {
+                    'name': keyword
+                },
+                //请求成功
+                success: function (result) {
+                    if (result.code == 202) {
+                        let html = `<span class="nodata">${result.data}</span><br>`;
+                        $('.res-item').html(html)
+                    } else {
+                        let html = '';
+                        $.each(result.data, function (i, item) {
+                            var m3u8 = '';
+                            var online = '';
+                            var xunlei = '';
+                            var m3u8_link = eval(item.m3u8_link);
+                            var online_link = eval(item.online_link);
+                            var xunlei_link = eval(item.xunlei_link);
+                            $.each(m3u8_link, function (j, innerItem) {
+                                let infos = '';
+                                if (typeof innerItem == 'object') {
+                                    for (let link in innerItem) {
+                                        let name = Object.keys(innerItem[link]);
+                                        let value = innerItem[link][name];
+                                        let rand = Math.floor((Math.random() * m3u8parse.length));
+                                        let m3u8_url = m3u8parse[rand];
+                                        value = m3u8_url + value;
+                                        infos += `<a href="${value}" target="_blank" class="btn btn-sm btn-danger">
+                                                    <span class="glyphicon glyphicon-expand"></span>${name}
+                                                  </a>`
+                                    }
+                                    if (innerItem.length >= 15) {
+                                        infos += '<br><hr>';
+                                    }
+                                } else {
+                                    $.each(innerItem, function (k, smallItem) {
+                                        for (let link in smallItem) {
+                                            let name = Object.keys(innerItem[link]);
+                                            let value = innerItem[link][name];
+                                            let rand = Math.floor((Math.random() * m3u8parse.length));
+                                            let m3u8_url = m3u8parse[rand];
+                                            value = m3u8_url + value;
+                                            infos += `<a href="${value}" target="_blank" class="btn btn-sm btn-danger">
+                                                    <span class="glyphicon glyphicon-expand"></span>${name}
+                                                  </a>`
+                                        }
+                                        if (innerItem.length >= 15) {
+                                            infos += '<br><hr>';
+                                        }
+                                    })
+                                }
+                                m3u8 += `${infos}`
+                            });
+
+                            $.each(online_link, function (j, innerItem) {
+                                let infos = '';
+                                if (typeof innerItem == 'object') {
+                                    for (let link in innerItem) {
+                                        let name = Object.keys(innerItem[link]);
+                                        let value = innerItem[link][name];
+                                        value = urlCrypt(value);
+                                        infos += `<a href="${value}" target="_blank" class="btn btn-sm btn-danger">
+                                                    <span class="glyphicon glyphicon-expand"></span>${name}
+                                                  </a>`
+                                    }
+                                    if (innerItem.length >= 15) {
+                                        infos += '<br><hr>';
+                                    }
+                                } else {
+                                    $.each(innerItem, function (k, smallItem) {
+                                        for (let link in smallItem) {
+                                            let name = Object.keys(innerItem[link]);
+                                            let value = innerItem[link][name];
+                                            value = urlCrypt(value);
+                                            infos += `<a href="${value}" target="_blank" class="btn btn-sm btn-danger">
+                                                    <span class="glyphicon glyphicon-expand"></span>${name}
+                                                  </a>`
+                                        }
+                                        if (innerItem.length >= 15) {
+                                            infos += '<br><hr>';
+                                        }
+                                    })
+                                }
+                                online += `${infos}`
+                            });
+
+                            $.each(xunlei_link, function (j, innerItem) {
+                                let infos = '';
+                                if (typeof innerItem == 'object') {
+                                    for (let link in innerItem) {
+                                        let name = Object.keys(innerItem[link]);
+                                        let value = innerItem[link][name];
+                                        infos += `<a href="${value}" target="_blank" class="btn btn-sm btn-danger">
+                                                    <span class="glyphicon glyphicon-expand"></span>${name}
+                                                  </a>`
+                                    }
+                                } else {
+                                    $.each(innerItem, function (k, smallItem) {
+                                        for (let link in smallItem) {
+                                            let name = Object.keys(innerItem[link]);
+                                            let value = innerItem[link][name];
+                                            infos += `<a href="${value}" target="_blank" class="btn btn-sm btn-danger">
+                                                    <span class="glyphicon glyphicon-expand"></span>${name}
+                                                  </a>`
+                                        }
+                                    })
+                                }
+                                xunlei += `${infos}`
+                            });
+                            let update_time = item.update_time;
+                            update_time = update_time.toString().split('T')[0];
+                            update_time = update_time.toString().split(' ')[0];
+                            html += `<div class="items">
+                                    <div class="row">
+                                        <h4>${item.title}</h4>
+                                        <h5>
+                                            <span>状态：${item.status}</span> |&nbsp;
+                                            <span>类型： ${item.types}</span> |&nbsp;
+                                            <span>属性：${item.property}</span> |&nbsp;
+                                            <span>区域：${item.area}</span> |&nbsp;
+                                            <span>语言：${item.lang}</span> |&nbsp;
+                                            <span>评分：${item.grade}</span> |&nbsp;
+                                            <span>上映年份：${item.show_time}</span>
+                                        </h5>
+                                        <h5>
+                                            <span>更新时间：${update_time}</span> |&nbsp;
+                                            <span>导演：${item.director}</span> |&nbsp;
+                                            <span>主演：${item.actors}</span>
+                                        </h5>
+                                        <h5 class="info">剧情简介：${item.info}</h5>
+                                        <div class="outer-links">
+                                            <h5>在线播放地址1：</h5>
+                                            <div class="links">${online}</div>
+                                        </div>
+                                        <div class="outer-links">
+                                            <h5 class="gap">在线播放地址2：</h5>
+                                            <div class="links">${m3u8}</div>
+                                        </div>
+                                        <!--
+                                        <div class="outer-links">
+                                            <h5  class="gap">迅雷下载链接：</h5>
+                                            <div class="links">${xunlei}</div>
+                                        </div>
+                                        -->
+                                    </div>
+                            </div>`;
+                        });
+                        $('.res-item').html(html)
+                    }
+                },
+                //请求失败，包含具体的错误信息
+                error: function (e) {
+                    console.log(e.code);
+                    console.log(e.data);
+                }
+            });
+            //$('#keyword').val('');
+        }
+
+        $('#search').click(function () {
+            ClickEevent()
+        });
+        // 监听回车事件
+        document.onkeydown = function (event) {
+            if (event && event.keyCode == 13) { //回车键为13
+                ClickEevent();
+            }
+        };
+    });
 </script>
 </html>
